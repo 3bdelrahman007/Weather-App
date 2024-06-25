@@ -133,18 +133,18 @@ function displayWeather(data){
                         <div class="box-content py-5 px-3">
                             <p class="fs-3">${data.location.country}</p>
                             <p class="fs-4">${data.location.name}</p>
-                            <p class="display-3 fw-bold">${dataArr[0].day.avgtemp_c}<sup>o</sup>C</p>
+                            <p class="display-3 fw-bold">${data.current.heatindex_c}<sup>o</sup>C</p>
                             <img src="https:${dataArr[0].day.condition.icon}" alt="">
                             <p class="main-color">${dataArr[0].day.condition.text}</p>
                         </div>
                         <div class="box-footer d-flex align-items-center gap-4 pb-5 px-3">
                             <div class="umbrella">
                                 <img src="images/icon-umberella.png" alt="">
-                                <span>${data.current.humidity}</span>
+                                <span>${data.current.humidity}%</span>
                             </div>
                             <div class="wind">
                                 <img src="images/icon-wind.png" alt="">
-                                <span>${dataArr[0].day.maxwind_kph}km/h</span>
+                                <span>${data.current.wind_kph}km/h</span>
                             </div>
                             <div class="compass">
                                 <img src="images/icon-compass.png" alt="">
@@ -175,7 +175,7 @@ function displayforecast(data){
                             </div>
                             <div class="box-content py-5 px-3">
                                 <img class='pb-4' src="https:${dataArr[i].day.condition.icon}" alt="">
-                                <p class="display-3 fw-bold">${dataArr[i].day.avgtemp_c} <sup>o</sup>C</p>
+                                <p class="display-3 fw-bold">${dataArr[i].day.maxtemp_c} <sup>o</sup>C</p>
                                 <p class="main-color">${dataArr[i].day.condition.text}</p>
                             </div>
                         </div>
